@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 编辑器</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.44.0/min/vs/loader.min.js"></script>
+    
+    <!-- 本地 Pyodide（必须改成这个） -->
+    <script src="pyodide/pyodide.js"></script>
+</head>
+<body>
+    <div class="title-bar">Python 编辑器 </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-header">资源管理器</div>
+            <div id="file-list">
+                <div class="file-item active" data-filename="main.py">main.py</div>
+            </div>
+        </div>
+
+        <div class="editor-area">
+            <div class="tabs">
+                <div class="tab active">main.py</div>
+            </div>
+            <div id="editor" style="width:100%; height:calc(100vh - 110px);"></div>
+        </div>
+
+        <div class="right-panel">
+            <div class="panel-header">输出</div>
+            <button onclick="runCode()" class="run-btn">▶ 运行 (Ctrl+Enter)</button>
+            <div id="output" class="output"></div>
+        </div>
+    </div>
+
+    <div class="status-bar">
+        <span>Python 3.12</span>
+        <span id="status">就绪</span>
+    </div>
+
+    <div class="floating-btns">
+        <button onclick="exportFile()">导出</button>
+        <button onclick="importFile()">导入</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

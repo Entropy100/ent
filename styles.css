@@ -1,0 +1,66 @@
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', sans-serif; }
+body { background:#1e1e1e; color:#d4d4d4; height:100vh; overflow:hidden; }
+
+.title-bar {
+    background:#323233; padding:8px 12px; font-size:14px;
+}
+
+.main-container { display:flex; height:calc(100vh - 70px); }
+
+.sidebar {
+    width:260px; background:#252526; border-right:1px solid #3c3c3c;
+}
+
+.sidebar-header {
+    padding:8px 12px; background:#2d2d2e; font-size:13px;
+}
+
+.file-item {
+    padding:6px 12px; cursor:pointer;
+}
+
+.file-item:hover, .file-item.active {
+    background:#37373d;
+}
+
+.editor-area { flex:1; display:flex; flex-direction:column; }
+
+.tabs {
+    background:#252526; display:flex; border-bottom:1px solid #3c3c3c;
+}
+
+.tab {
+    padding:8px 16px; background:#1e1e1e; border-right:1px solid #3c3c3c;
+}
+
+.tab.active { border-bottom:2px solid #3794ff; }
+
+.right-panel {
+    width:320px; background:#252526; border-left:1px solid #3c3c3c;
+    display:flex; flex-direction:column;
+}
+
+.run-btn {
+    margin:12px; padding:10px; background:#0e7a0d; color:white;
+    border:none; border-radius:4px; cursor:pointer;
+}
+
+.output {
+    flex:1; padding:12px; background:#1e1e1e; overflow-y:auto;
+    font-family:Consolas, monospace; white-space:pre-wrap;
+}
+
+.status-bar {
+    position:fixed; bottom:0; left:0; right:0; height:28px;
+    background:#007acc; color:white; font-size:12px;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:0 12px;
+}
+
+.floating-btns {
+    position:fixed; bottom:45px; right:20px; display:flex; gap:10px; z-index:100;
+}
+
+.floating-btns button {
+    padding:10px 18px; background:#007acc; border:none; border-radius:4px; color:white;
+}
