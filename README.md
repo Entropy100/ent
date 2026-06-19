@@ -42,7 +42,7 @@ cd ent
 python -m http.server 8080
  
  
-3. 在浏览器中打开  > [http://localhost:8080](http://localhost:8080)  即可使用
+3. 在浏览器中打开  http://localhost:8080  即可使用
  
 技术依赖
  
